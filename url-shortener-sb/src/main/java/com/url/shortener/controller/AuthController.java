@@ -20,6 +20,7 @@ public class AuthController {
     public AuthController(UserService userService) {
         this.userService = userService;
     }
+    //Long URL --> short URL
 
     @PostMapping("/public/login")
     public ResponseEntity<?> loginUser(@RequestBody LoginRequest loginRequest){
