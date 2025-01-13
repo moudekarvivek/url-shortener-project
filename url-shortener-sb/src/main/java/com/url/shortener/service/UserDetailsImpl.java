@@ -9,17 +9,16 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
 public class UserDetailsImpl implements UserDetails {
-
     private static final long serialVersionUID = 1L;
 
     private Long id;
     private String username;
     private String email;
+
     private String password;
 
     private Collection<? extends GrantedAuthority> authorities;
@@ -32,7 +31,7 @@ public class UserDetailsImpl implements UserDetails {
         this.authorities = authorities;
     }
 
-    public static UserDetailsImpl build(User user){
+    public static UserDetailsImpl build(User user) {
         GrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
         return new UserDetailsImpl(
                 user.getId(),
