@@ -6,7 +6,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Navbar from './components/NavBar'
 import RegisterPage from './components/RegisterPage'
 import { Toaster } from 'react-hot-toast'
-import DashboardLayout from './Dashboard/DashboardLayout'
+import DashboardLayout from './components/Dashboard/DashboardLayout'
 import LoginPage from './components/LoginPage'
 
 function App() {
